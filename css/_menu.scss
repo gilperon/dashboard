@@ -1,0 +1,46 @@
+
+/*
+ --- MENU ---------------------------------------------------------------------------------------------------- /
+*/
+
+#menu{
+    width: var(--site-menu-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    transition: all ease-in-out 0.5s;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 1;
+    margin-left: calc(-1 * var(--site-menu-width));
+}
+#main{
+    background: #f2f2f2;
+    transition: all ease-in-out 0.5s;
+    min-height: 100vh;
+    margin-left: 0;
+}
+
+@media (min-width: 768px) { 
+    #menu{
+        margin-left: 0;
+    }
+    #main{
+        margin-left: var(--site-menu-width);
+    }
+}
+/* Fix para o Menu no Resize, se ocorrer onclick garantir que fique escondido*/
+@media (max-width: 992px) { 
+    #menu{
+        margin-left: calc(-1 * var(--site-menu-width)) !important;
+    }
+    #main{
+        margin-left: 0 !important;
+    }
+}
+

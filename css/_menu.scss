@@ -3,6 +3,11 @@
  --- MENU ---------------------------------------------------------------------------------------------------- /
 */
 
+.container-fluid{
+    position: relative;
+    z-index:1;
+}
+
 #menu{
     width: var(--site-menu-width);
     position: fixed;
@@ -24,6 +29,24 @@
     transition: all ease-in-out 0.5s;
     min-height: 100vh;
     margin-left: 0;
+    position: relative;
+    &::before{
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        right: -80px;
+        top:-80px;
+        background: #e6e6e6;
+        width: 210px;
+        height: 210px;
+        z-index:0;
+        opacity: .7;
+        @media (max-width: 768px) {
+            width: 200px;
+            height: 200px;
+            opacity: .5;
+        }
+    }
 }
 
 @media (min-width: 768px) { 

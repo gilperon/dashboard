@@ -6,6 +6,10 @@
   --site-color-primary:orange;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -14,6 +18,11 @@ a {
 /*
  --- MENU ---------------------------------------------------------------------------------------------------- /
 */
+.container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
 #menu {
   width: var(--site-menu-width);
   position: fixed;
@@ -36,6 +45,26 @@ a {
   transition: all ease-in-out 0.5s;
   min-height: 100vh;
   margin-left: 0;
+  position: relative;
+}
+#main::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  background: #e6e6e6;
+  width: 210px;
+  height: 210px;
+  z-index: 0;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  #main::before {
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: 768px) {
@@ -146,6 +175,7 @@ a {
 .cp-stats .grid-item {
   border: 1px solid #ebebeb;
   border-radius: 0.25rem;
+  padding-bottom: 24px;
 }
 .cp-stats .card-stats {
   display: flex;
@@ -182,6 +212,20 @@ a {
   top: -10px;
   right: -10px;
 }
+.cp-stats .card-stats .align-self-center svg {
+  width: 100px;
+}
+@media (max-width: 768px) {
+  .cp-stats .card-stats .align-self-center {
+    top: -15px;
+    right: -25px;
+  }
+  .cp-stats .card-stats .align-self-center svg {
+    margin-top: 25px !important;
+    margin-right: 15px !important;
+    max-width: 60px !important;
+  }
+}
 .cp-stats .card-stats .material-symbols-outlined {
   margin-top: 2px;
   font-size: 45px;
@@ -202,6 +246,7 @@ a {
 }
 .cp-stats .card-stats .material-symbols-outlined.icon-cash {
   color: #00c292;
+  color: #fa7c38;
 }
 .cp-stats .card-stats .material-symbols-outlined.icon-card {
   color: #01c0c8;

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+     <!--Melhor importar as fontes no css fica mais clean @import-->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,700|Lato:300,400,500,600,700|Open+Sans:300,400,500,600,700|Roboto:300,400,500,700" rel="stylesheet">
+
+     <!-- FontAwesome Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <!-- Style custom -->
+    <link rel="stylesheet" href="base.css">
+
+
+</head>
+<body>
+
+    <!--Menu Desktop-->
+    <nav id="menu">
+        <div class="p-3">
+            <img src="https://gilperon.github.io/skeleton/assets/img/icon-logo.png" style="height:30px;filter: grayscale(1); opacity: .8;">
+        </div>
+    </nav>
+
+    <!--Menu Mobile-->
+    <aside id="mobile-menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="asideMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <img src="./assets/img/icon-logo.png" style="width: 35px;">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+            <div class="d-flex justify-content-center align-items-center div-cta">
+                <a href="./consulta.html" class="btn-cta">
+                    <span class="icon-search"></span> Buscar minhas dívidas
+                </a>
+            </div>
+            <div class="offcanvas-body offcanvas-scrollbar">
+            <nav id="mobile-navigation">
+                <a href="./"><i class="bi-house icone"></i>Início</a>
+                <a href="#drop-1" id="produtos-drop" data-bs-toggle="collapse" aria-expanded="false">
+                    <i class="bi-layers"></i>Parceiros
+                    <span class="arrow-nav"></span>
+                </a>
+                <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                    <li><a href="./crefaz.html">Crefaz</a></li>
+                    <li><a href="./bradesco.html">Bradesco</a></li>
+                </ul>
+                <hr class="divider">
+                <a href="https://www.ph3a.com.br/"><i class="bi-window"></i>Suporte</a>
+            </nav>
+            </div>
+        </div>
+    </aside>
+
+    <!--Content-->
+    <main id="main">
+
+        <div class="container-fluid" style="-webkit-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1);">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center" style="height:60px;background:#fff;">
+                    <div class="d-flex">
+                        <!-- Icon Menu on Desktop-->
+                        <div class="d-block d-md-none">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" data-bs-toggle="offcanvas" data-bs-target="#asideMenu"></i>
+                        </div>
+                        <!-- Icon Menu on Desktop-->
+                        <div class="d-none d-md-flex">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','0');$('#menu').css('left','-250px');$(this).toggle().next('.bi-x').toggle();"></i>
+                            <i class="bi bi-x" style="display:none;color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','250px');$('#menu').css('left','0');$(this).toggle().prev('.bi-list').toggle();"></i>
+                        </div>
+                        <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height:22px;margin-left:7px;"></div>
+                    </div>
+                    <div>
+                        <span class="cp-avatar">JO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!--Componente Stats-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 grid-stats cp-stats">
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <div class="card-stats">
+                                <div>
+                                    <p class="card-label">Dívidas</p>
+                                    <h2><span>R$</span>0,00<span class="badge badge-default">Total</span></h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <span class="material-symbols-outlined icon-minus">
+                                        sell
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="card-stats">
+                                <div>
+                                    <p class="card-label">Negociado</p>
+                                    <h2><span>R$</span>571,00<span class="badge badge-default">0.00%</span></h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <span class="material-symbols-outlined icon-card">
+                                        credit_card
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="card-stats">
+                                <div>
+                                    <p class="card-label">Economia</p>
+                                    <h2><span>R$</span>100,00<span class="badge badge-success d-none">25.00%</span></h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <span class="material-symbols-outlined icon-cash">
+                                        attach_money
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="card-stats">
+                                <div>
+                                    <p class="card-label">Oferta de até</p>
+                                    <h2>50<span>%</span><span class="badge badge-default">0,00%</span></h2>
+                                </div>
+                                <div class="align-self-center">
+                                    <span class="material-symbols-outlined icon-undefined">
+                                        percent
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <!--Componente Stats-->
+        <div class="container-fluid d-none">
+            <div class="row">
+                <div class="col-12 grid-stats cp-stats-texto">
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:20px;margin-top:2px;" xmlns="http://www.w3.org/2000/svg" width="40" height="64" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 40 64"><rect width="36" height="60" x="2" y="2" rx="5"></rect><path d="M26.414 4.12h-12m1.598 31.63c0 .994.472 1.948 1.314 2.651.842.704 1.984 1.099 3.174 1.099m0 0c.6.037 1.204-.034 1.77-.21a4.36 4.36 0 0 0 1.503-.806 3.5 3.5 0 0 0 .965-1.256c.21-.472.295-.976.25-1.478 0-3.75-8.976-3.75-8.976-7.5a2.976 2.976 0 0 1 .25-1.478c.21-.472.539-.9.965-1.257a4.357 4.357 0 0 1 1.504-.806 4.95 4.95 0 0 1 1.769-.21m0 15V42m0-17.5c1.19 0 2.332.395 3.174 1.098.842.703 1.314 1.657 1.314 2.652M20.5 24.5V22"></path></svg>
+                                </div>
+                                <div class="mb-1">Fácil</div>
+                                <div class="mb-2">Aqui é você quem diz como e quanto pode pagar pela sua dívida</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg class="svg-clock" style="fill: #ff6c00;width:38px;" xmlns="http://www.w3.org/2000/svg" width="63" height="46" fill="currentColor" viewBox="0 0 63 46"><path d="M14 28.5a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 0 3h-8a1.5 1.5 0 0 1-1.5-1.5Zm-6 0A1.5 1.5 0 0 1 9.5 27h1a1.5 1.5 0 0 1 0 3h-1A1.5 1.5 0 0 1 8 28.5Zm-5-12A1.5 1.5 0 0 1 4.5 15h20a1.5 1.5 0 0 1 0 3h-20A1.5 1.5 0 0 1 3 16.5Zm5 6A1.5 1.5 0 0 1 9.5 21h15a1.5 1.5 0 0 1 0 3h-15A1.5 1.5 0 0 1 8 22.5Zm-8 0A1.5 1.5 0 0 1 1.5 21h4a1.5 1.5 0 0 1 0 3h-4A1.5 1.5 0 0 1 0 22.5ZM42.454 12a1.5 1.5 0 0 1 1.5 1.5v11.154a1.5 1.5 0 0 1-.83 1.341l-8.6 4.3a1.5 1.5 0 0 1-1.341-2.683l7.77-3.885V13.5a1.5 1.5 0 0 1 1.5-1.5Z"></path><path d="m25.256 8.508 3.223.806a1.5 1.5 0 1 1-.727 2.91l-6.616-1.653a1.5 1.5 0 0 1-1.091-1.82l1.654-6.615a1.5 1.5 0 0 1 2.91.728l-.718 2.872A25.415 25.415 0 0 1 40.001 0v1.5V0a23 23 0 1 1-19.125 35.778 1.5 1.5 0 0 1 2.495-1.667A20 20 0 1 0 40 3h-.002a22.415 22.415 0 0 0-14.743 5.508Z"></path></svg>
+                                </div>
+                                <div class="mb-1">Rápido</div>
+                                <div class="mb-2">Você faz tudo online e só precisa de 5 minutos para negociar.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:27px;" xmlns="http://www.w3.org/2000/svg" width="58" height="64" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 58 64" class="card-info-icon"><rect width="36" height="60" x="11" y="2" rx="5"></rect><path d="M35 4.12H23m2.896 47.535h6.207M2 2l54 60"></path></svg>
+                                </div>
+                                <div class="mb-1">Sem ligações</div>
+                                <div class="mb-2">Troque horas no telefone por uma negociação rápida.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:28px;" xmlns="http://www.w3.org/2000/svg" width="47" height="57" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 47 57"><path d="M24.454 34v8m11-23.929V13.25a11.25 11.25 0 1 0-22.5 0v4.821"></path><rect width="43" height="35" x="2.454" y="20" rx="5"></rect><rect width="43" height="35" x="2.454" y="20" rx="5"></rect></svg>
+                                </div>
+                                <div class="mb-1">Seguro</div>
+                                <div class="mb-2">Negocie com a certeza de que seus dados estão protegidos.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--Componentes Aletaorio-->
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-12" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+            <div class="row mt-1 gx-2 gy-2">
+                <div class="col-md-6" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+                <div class="col-md-6" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12" style="background:inherit;height: 800px;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+</body>
+</html>

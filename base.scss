@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Inter:wght@400;600&family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0&display=block');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root{
+    --site-menu-width:250px;
+    --site-color-primary:orange;
+}
+
+
+
+/* --- MENU -----------------------------------------------------------------------------------------------------------------*/
+#menu{
+    width: var(--site-menu-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    transition: all ease-in-out 0.5s;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 1;
+    margin-left: calc(-1 * var(--site-menu-width));
+}
+#main{
+    background: #f2f2f2;
+    transition: all ease-in-out 0.5s;
+    min-height: 100vh;
+    margin-left: 0;
+}
+
+@media (min-width: 768px) { 
+    #menu{
+        margin-left: 0;
+    }
+    #main{
+        margin-left: var(--site-menu-width);
+    }
+}
+/* Fix para o Menu no Resize, se ocorrer onclick garantir que fique escondido*/
+@media (max-width: 768px) { 
+    #menu{
+        margin-left: calc(-1 * var(--site-menu-width)) !important;
+    }
+    #main{
+        margin-left: 0 !important;
+    }
+}
+
+
+
+
+
+
+/* --- COMPONENTS -----------------------------------------------------------------------------------------------------------------*/
+
+.grid-stats{
+
+    .grid-container { // Grid Desktop
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        width:100%;
+        margin-top:20px;
+    }
+    .grid-item {
+        padding: 15px 25px 28px;
+        background:#fff;
+    }
+    @media (max-width: 768px) { //Grid Mobile
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 100%;
+            margin:0 auto;
+            margin-top:15px;
+        }
+        .grid-item {
+            padding: 18px 24px 28px;
+        }
+    }
+
+}
+
+.cp-avatar{
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: #0F172A;
+    color: #eee;
+    user-select: none;
+    opacity: .6;
+    zoom:.94;
+}
+
+.cp-stats{
+
+    .grid-item{
+        border: 1px solid #ebebeb;
+        border-radius: 10px;
+    }
+
+    .card-stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position:relative;
+
+        h2 {
+            font-size: 25px;
+            letter-spacing:-.5px;
+            color: #333;
+            font-family: Inter;
+            font-weight: 600;
+            margin: 0;
+            span:first-child{
+                letter-spacing: 0;
+                font-size:13px;
+                margin-right:5px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: #333;
+            margin: 0 0 .5rem;
+
+            &.card-label{
+                font-weight: 500;
+                font-size: 13px;
+                font-family: 'Open Sans';
+                color: #667180;
+            }
+        }
+
+        .align-self-center{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        .material-symbols-outlined {
+            margin-top: 2px;
+            font-size: 45px;
+            font-weight: 300;
+            max-width: 50px;
+            overflow: hidden;
+            max-height: 60px;
+            // Circle
+            background: #fff;
+            opacity: .5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            font-size: 36px;
+
+            &.icon-cash {
+                color: #00c292;
+
+            }
+
+            &.icon-card {
+                color: #01c0c8;
+                font-size:30px;
+            }
+
+            &.icon-minus {
+                color: #e34ee3;
+                font-size: 30px;
+            }
+
+            &.icon-undefined {
+                color: #d7d7d7;
+                color: #b7b7b7;
+                font-size: 30px;
+            }
+        }
+
+        .badge {
+            margin-left: 5px;
+            vertical-align: 2px;
+            font-size: 11px;
+            padding: 4px 6px;
+            letter-spacing: 0;
+
+            &.badge-default {
+                background: #edf1f5;
+                color: rgba(107,123,147,.5);
+            }
+
+            &.badge-success {
+                background: rgba(0,194,146,.2);
+                color: rgba(0,131,98,.6);
+            }
+        }
+    }
+}
+
+
+.cp-stats-texto{
+    .box-cs{
+        display:flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        zoom:.9;
+        > div{
+            font-family: "Inter", Arial, sans-serif;
+            color:#000;
+            &:nth-child(1){
+                height: 50px;
+                display: flex;
+                align-items: center;
+                margin-bottom:0.5rem;
+            }
+            &:nth-child(2){
+                font-size:15px;
+                font-weight: 700;
+                @media (max-width: 768px) { font-size:15px; }
+            }
+            &:nth-child(3){
+                font-size:14px;
+                @media (max-width: 768px) { font-size:13px; }
+            }
+            &.hr-cs{
+                margin-top: 15px;
+                width: 70px;
+                height: 3px;
+                background: #ebecf1;
+                border-radius: 5px;
+                display: block;
+            }
+        }
+
+        svg{
+            stroke:var(--site-color-primary) !important;
+        }
+        .svg-clock{
+            stroke:none !important;
+            fill:var(--site-color-primary) !important;
+        }
+
+    }
+}

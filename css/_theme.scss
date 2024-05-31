@@ -1,0 +1,35 @@
+body{
+
+    --site-color-primary:#ff6c00;
+
+    .menu-logo{
+        display:none;
+    }
+
+
+    &.parceiro-bradesco{
+        --site-color-primary:#DF3253;
+        --site-color-primary-hover:#c4213f;
+        .menu-logo img:nth-child(2){
+            display:none;
+        }
+    }
+    &.parceiro-crefaz{
+        --site-color-primary:#446299 ;
+        --site-color-primary-hover:#2A487E;
+        .menu-logo img:nth-child(1){
+            display:none;
+        }
+    }
+
+    &.parceiro-bradesco, &.parceiro-crefaz{
+        .section-cover-livre{
+            display:none !important;
+        }
+        .menu-logo{
+            display:block !important;
+        }
+
+    }
+
+}

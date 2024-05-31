@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+     <!--Melhor importar as fontes no css fica mais clean @import-->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,700|Lato:300,400,500,600,700|Open+Sans:300,400,500,600,700|Roboto:300,400,500,700" rel="stylesheet">
+
+     <!-- FontAwesome Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <!-- Style custom -->
+    <link rel="stylesheet" href="css/base.css">
+
+
+</head>
+<body class="parceiro-bradesco">
+
+    <!--Menu Desktop-->
+    <nav id="menu">
+
+        <div style="position:sticky;top:0;left:0;background:#242635;z-index:10;">
+            <div style="display:flex;justify-content: space-between; align-items: center;padding:0 10px;height:60px;background:#2C2F41;">
+                <img src="https://gilperon.github.io/skeleton/assets/img/icon-logo.png" style="height:32px;filter: grayscale(1); opacity: .5;margin-left:10px;" hidden>
+            </div>
+
+            <section class="profile p-3" style="display: flex;flex-direction: row; justify-content:start; align-items: center;padding:0 15px;background:#1A1C29;">
+                <div>
+                    <span class="cp-avatar cp-avatar-big">JO</span>
+                </div>
+                <div style="padding:0 10px;font-family: 'Inter';opacity: .7;zoom: .9;">
+                    <span style="font-size:16px;color:#fff;display: block;font-weight:500;opacity: .8;margin-bottom: -2px;">José</span>
+                    <span style="font-size:14px;color:#fff;display: block;opacity: .8;">CPF: 375.034.239-10</span>
+                </div>
+            </section>
+
+            <nav id="nav-simple">
+                <!--Sub0-->
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title active" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> home </span> Início
+                    </div>
+                </a>
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> sell </span> Ofertas
+                    </div>
+                </a>
+                <!--Sub1-->
+                <a href="#pageSubmenu-1" data-bs-toggle="collapse" aria-expanded="false" class="nav-title collapsed" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1 w-100">
+                        <div class="d-flex justify-content-start align-items-center gap-1"><span class="material-symbols-outlined"> edit_note </span> Perfil</div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </a>
+                <ul class="list-unstyled mb-0 collapse" id="pageSubmenu-1">
+                    <li><a href="#">Informações</a></li>
+                </ul>
+                <!--Sub2-->
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> help </span> Suporte
+                    </div>
+                </a>
+            </nav>
+
+        </div>
+
+        
+        <div style="margin-top:auto;background:#000;position:sticky;bottom:0;z-index:10;" hidden>
+            <button type="button" class="btn btn-secondary w-100" style="opacity: 0.3; background: #2a2a2a; border: 0; font-size: 14px; padding: 8px;height:50px;"> <i class="material-icons" style="display:none;vertical-align:-7px;">help</i> Desenvolvido por PH3A</button>
+        </div>
+    </nav>
+
+    <!--Menu Mobile-->
+    <aside id="mobile-menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="asideMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <img src="./assets/img/icon-logo.png" style="width: 35px;">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+            <div class="d-flex justify-content-center align-items-center div-cta">
+                <a href="./consulta.html" class="btn-cta">
+                    <span class="icon-search"></span> Buscar minhas dívidas
+                </a>
+            </div>
+            <div class="offcanvas-body offcanvas-scrollbar">
+            <nav id="mobile-navigation">
+                <a href="./"><i class="bi-house icone"></i>Início</a>
+                <a href="#drop-1" id="produtos-drop" data-bs-toggle="collapse" aria-expanded="false">
+                    <i class="bi-layers"></i>Parceiros
+                    <span class="arrow-nav"></span>
+                </a>
+                <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                    <li><a href="./crefaz.html">Crefaz</a></li>
+                    <li><a href="./bradesco.html">Bradesco</a></li>
+                </ul>
+                <hr class="divider">
+                <a href="https://www.ph3a.com.br/"><i class="bi-window"></i>Suporte</a>
+            </nav>
+            </div>
+        </div>
+    </aside>
+
+    <!--Content-->
+    <main id="main">
+
+        <div class="container-fluid" style="-webkit-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1);box-shadow:none;border-bottom:1px solid #eee;">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center" style="height:60px;background:#fff;">
+                    <div class="d-flex">
+                        <!-- Icon Menu on Mobile-->
+                        <div class="d-block d-md-none">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" data-bs-toggle="offcanvas" data-bs-target="#asideMenu"></i>
+                        </div>
+                        <!-- Icon Menu on Desktop-->
+                        <div class="d-none d-md-flex">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','0');$('#menu').css('left','-250px');$(this).toggle().next('.bi-x').toggle();"></i>
+                            <i class="bi bi-x" style="display:none;color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','250px');$('#menu').css('left','0');$(this).toggle().prev('.bi-list').toggle();"></i>
+                        </div>
+                        <div class="menu-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height:22px;margin-left:7px;">
+                            <img src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height:40px;margin-left:7px;">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <!-- <span class="material-symbols-outlined" style="transform: rotate(90deg);opacity: .5;margin-right: 5px;margin-top: 2px;zoom: .9;">chevron_right</span>
+                        <span class="cp-avatar">JO</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-12 p-3 px-4 pt-3 pb-2">
+                <h4 style="margin-top:5px;">Olá José,</h4>
+                <h6 class="fw-normal mb-0 text-muted">Confira as <span style=" color: #000; font-weight: 600; opacity: .8; letter-spacing: -.4px; ">melhores ofertas</span> para você!</h6>
+            </div>
+            </div>
+        </div>
+
+
+
+
+        
+        <style>
+            .card{
+                border:1px solid #e7eaed !important;
+                border-radius:.35rem !important;
+            }
+            .block-27 ul {
+            padding: 0;
+            margin: 0; 
+            font-family: "Poppins", Arial, sans-serif;
+        }
+            .block-27 ul li {
+                display: inline-block;
+                margin-bottom: 4px;
+                font-weight: 400; }
+                .block-27 ul li a, .block-27 ul li span {
+                font-size:15px;
+                color: gray;
+                text-align: center;
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                border-radius: 50%;
+                border: 1px solid #e6e6e6;
+                &:hover{
+                    border: 1px solid #d6d6d6;
+                }
+            
+                }
+                .block-27 ul li.active a, .block-27 ul li.active span {
+                background: #4ba1fa;
+                background: rgba(107, 123, 147, 0.12);
+                color: #000;
+                border: 1px solid transparent; 
+            }
+
+
+
+            
+                
+
+        </style>
+
+
+
+<style>
+    
+    .table thead th {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        font-size: .75rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-top: 0
+    }
+
+
+    .table>:not(caption)>*>*{
+        padding:.75rem .5rem;
+    }
+    
+    
+    .table th {
+        font-weight: 500;
+        padding: 1rem
+    }
+    
+    .table td .progress {
+        height: 3px;
+        width: 120px;
+        margin: 0
+    }
+    
+    .table td,.table th {
+        font-size: .875rem;
+        white-space: nowrap
+    }
+    
+    .table.user-table thead th {
+        border-top: 0
+    }
+    
+    .table.align-items-center td,.table.align-items-center th {
+        vertical-align: middle
+    }
+    
+    .table .thead-dark th {
+        background-color: #1f2937;
+        color: #fff
+    }
+    
+    .table .thead-dark th a {
+        color: #1f2937
+    }
+    
+    .table .thead-light th {
+        background-color: #f2f4f6;
+        color: #1f2937
+    }
+    
+    .table .thead-light th a {
+        color: #1f2937
+    }
+    
+    .table-hover tr {
+        transition: all .2s ease
+    }
+    
+    @media (prefers-reduced-motion:reduce) {
+        .table-hover tr {
+            transition: none
+        }
+    }
+    
+    .table-flush td,.table-flush th {
+        border-left: 0;
+        border-right: 0
+    }
+    
+    .table-flush tbody tr:first-child td,.table-flush tbody tr:first-child th {
+        border-top: 0
+    }
+    
+    .table-flush tbody tr:last-child td,.table-flush tbody tr:last-child th {
+        border-bottom: 0
+    }
+
+    .table svg{height:1rem;}
+    </style>
+
+
+<style>
+    /*price*/
+    .pricing-table{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-table .block-heading {
+  padding-top: 80px;
+  margin-bottom: 40px;
+  text-align: center; 
+}
+
+.pricing-table .block-heading h2 {
+  color:#3b99e0;
+}
+
+.pricing-table .block-heading p {
+  text-align: center;
+  max-width: 420px;
+  margin: auto;
+  opacity: 0.7; 
+}
+
+.pricing-table .heading {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.pricing-table .item {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+  border-top: 2px solid #5ea4f3;
+  padding: 30px;
+  overflow: hidden;
+  position: relative; 
+}
+
+.pricing-table .col-md-5:not(:last-child) .item {
+  margin-bottom: 30px; 
+}
+
+.pricing-table .item button {
+  font-weight: 600; 
+}
+
+.pricing-table .ribbon {
+  width: 160px;
+  height: 32px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.25);
+  background: #4dbe3b;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -42px;
+  top: 20px;
+  padding-top: 7px; 
+}
+
+.pricing-table .item p {
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0.7; 
+}
+
+.pricing-table .features .feature {
+  font-weight: 400; font-family: 'Open Sans'; }
+
+.pricing-table .features h4 {
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+}
+
+.pricing-table .price h4 {
+  margin: 15px 0;
+  font-size: 28px;
+  text-align: center;
+  color: #2288f9; 
+}
+
+.pricing-table .buy-now button {
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  padding: 9px 0; 
+}
+.pricing-table .item button {
+    font-weight: 600;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.pricing-table h3{
+        font-size: 1.5rem;
+        font-family: 'Poppins';
+}
+
+</style>
+
+
+<div class="container-fluid my-4 px-4" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        
+        
+        <div class="col-md-12">
+
+
+            <div class="card" style="
+    border: 0 !important;
+    background: transparent;
+">
+                <div class="card-thead" style="
+    background: #f6f6f6;
+"></div>
+<div class="card-body" style="
+    /* background: #ecf1ff; */
+    padding: 0;
+">
+                
+                <div class="container-fluid my-4 px-2" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        
+<div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="ribbon">60%</div>
+                <div class="heading mb-3">
+                    <h3>Á vista</h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">De:</span> <span class="value" style="
+"><strike>R$260.37</strike></span></h4><h4><span class="feature">Por:</span> <span class="value">R$260.37</span></h4>
+<h4><span class="feature">Desconto: </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>R$250</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVO</button>
+            </div>
+        </div>
+        
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading mb-3">
+                    <h3>Parcelado <span style="
+    zoom: .7;
+">1x</span></h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div><div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading mb-3">
+                    <h3>Parcelado <span style="
+    zoom: .7;
+">2x</span></h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div>
+
+<div class="col-md-1">
+    <svg style="width: 6px;margin-right:10px;width: 50px;height: 50px;width: 44px;height: 44px;margin-top: 125px;margin-left: 15px;transform: scaleX(-1);" aria-hidden="true" id="back" class="back icon" width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 0.964844C11.25 0.764929 11.1705 0.588417 11.0114 0.436287C10.8717 0.302687 10.6973 0.241249 10.4883 0.251001C10.2793 0.259779 10.1049 0.331942 9.9652 0.464567L0.883927 9.15062C0.645322 9.37881 0.525 9.65967 0.525 9.99319C0.525 10.3267 0.645322 10.6163 0.883927 10.864L9.9652 19.5501C10.1243 19.6827 10.3037 19.75 10.5036 19.75C10.7024 19.75 10.8819 19.6827 11.041 19.5501C11.1807 19.397 11.25 19.2214 11.25 19.0215C11.25 18.8216 11.1807 18.6549 11.041 18.5213L2.13813 10.0068L11.041 1.4934C11.1807 1.34127 11.25 1.16476 11.25 0.964844Z"></path></svg>
+</div>
+        
+    </div>
+</div>
+                
+                </div>
+
+            </div>
+            
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid my-4 px-4 d-none" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        
+        
+        <div class="col-md-12">
+
+
+            <div class="card">
+                <div class="card-thead" style="
+    background: #f6f6f6;
+"><h5 class="card-title" style="padding: 20px;border-bottom:1px solid #ddd;margin-bottom: 0;font-size: 1.1rem;background: #fff;">Painel de negociação</h5></div>
+<div class="card-body" style="
+    background: #ecf1ff;
+">
+                
+                <div class="container-fluid my-4 px-4" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        
+<div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="ribbon">+ Desconto</div>
+                <div class="heading mb-3">
+                    <h3>Á vista</h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">De:</span> <span class="value" style="
+"><strike>R$260.37</strike></span></h4><h4><span class="feature">Por:</span> <span class="value">R$260.37</span></h4>
+<h4><span class="feature">Desconto: </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>R$250</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVO</button>
+            </div>
+        </div>
+        
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading mb-3">
+                    <h3>Parcelado <span style="
+    zoom: .7;
+">1x</span></h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div><div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading mb-3">
+                    <h3>Parcelado <span style="
+    zoom: .7;
+">2x</span></h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div>
+
+<div class="col-md-1">
+    <svg style="width: 6px;margin-right:10px;width: 50px;height: 50px;width: 45px;height: 45px;margin-top: 100px;margin-left: 20px;transform: scaleX(-1);" aria-hidden="true" id="back" class="back icon" width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 0.964844C11.25 0.764929 11.1705 0.588417 11.0114 0.436287C10.8717 0.302687 10.6973 0.241249 10.4883 0.251001C10.2793 0.259779 10.1049 0.331942 9.9652 0.464567L0.883927 9.15062C0.645322 9.37881 0.525 9.65967 0.525 9.99319C0.525 10.3267 0.645322 10.6163 0.883927 10.864L9.9652 19.5501C10.1243 19.6827 10.3037 19.75 10.5036 19.75C10.7024 19.75 10.8819 19.6827 11.041 19.5501C11.1807 19.397 11.25 19.2214 11.25 19.0215C11.25 18.8216 11.1807 18.6549 11.041 18.5213L2.13813 10.0068L11.041 1.4934C11.1807 1.34127 11.25 1.16476 11.25 0.964844Z"></path></svg>
+</div>
+        
+    </div>
+</div>
+                
+                </div>
+<div class="card-footer bg-white d-flex justify-content-start align-items-center"> <button type="button" class="btn btn-outline-gray-500 d-inline-flex align-items-center justify-content-center dashed-outline new-card w-100" data-bs-toggle="modal" data-bs-target="#KanbanAddCard" style="border: 1px dashed rgba(107, 114, 128,.5);width: fit-content !important;font-size: 14px;zoom:.9;opacity: .7;"><svg class="icon icon-xs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Visualizar todos</button> </div>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid my-4 px-4" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="ribbon">Ativo</div>
+                <div class="heading mb-3">
+                    <h3>Á vista</h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">De:</span> <span class="value" style="
+"><strike>R$260.37</strike></span></h4><h4><span class="feature">Por:</span> <span class="value">R$260.37</span></h4>
+<h4><span class="feature">Desconto: </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>R$250</h4>
+                </div>
+                <button class="btn btn-block btn-primary" type="submit">ATIVO</button>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading mb-3">
+                    <h3>Parcelado</h3>
+                </div>
+                
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="container-fluid my-4 px-4" style="">
+    <div class="row justify-content-md-start pricing-table">
+        
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="ribbon">Ativo</div>
+                <div class="heading">
+                    <h3>Á vista</h3>
+                </div>
+                <p>Pagamento á vista</p>
+                <div class="features" style="zoom:.9;">
+                    <h4><span class="feature">Desconto de </span><span class="value">60%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>R$250</h4>
+                </div>
+                <button class="btn btn-block btn-primary" type="submit">ATIVO</button>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-3">
+            <div class="item" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+">
+                <div class="heading">
+                    <h3>Parcelado</h3>
+                </div>
+                <p>Pagamento parcelado</p>
+                <div class="features" style="
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    zoom: .9;
+">
+                    <h4><span class="feature" style="
+">Entrada:</span> <span class="value">R$260.37</span></h4><h4><span class="feature">Parcela:</span> <span class="value">+1x de R$260.37</span></h4>
+<h4><span class="feature">Desconto de </span><span class="value">30%</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">ATIVAR</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title" style="padding:10px 10px;border-bottom:1px solid #ddd;"> Produtos</h5>
+                <ul class="list-group list-group-flush px-2">
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                    <div>
+                        <h3 class="h6 mb-1">Data de vencimento</h3>
+                        <p class="small pe-4">Para realizar o pagamento </p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                        <select class="form-select mb-0" id="estado">
+                            <option selected="selected">Consultas</option>
+                            <option value="1">10</option>
+                            <option value="2">20</option>
+                        </select>
+                        <label class="form-check-label" for="user-notification-1"></label>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                    <div>
+                        <h3 class="h6 mb-1">Forma de pagamento</h3>
+                        <p class="small pe-4">Escolha o método de pagamento</p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                        <i class="bi bi-credit-card-2-front-fill" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;"></i>
+                        <label class="form-check-label" for="user-notification-1"></label>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between pt-3 px-0 border-bottom">
+                        <div>
+                            <h3 class="h6 mb-1">Atividade da conta</h3>
+                            <p class="small pe-4">Notificações importantes por e-mail sobre atividades na conta</p>
+                        </div>
+                        <div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="user-notification-2" checked="checked"> 
+                                <label class="form-check-label" for="user-notification-2"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-3 mx-2">Continuar</a>
+                </div>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container-fluid my-4" style="max-width: 90%;">
+    <div class="row justify-content-md-center pricing-table">
+        <div class="col-md-5 col-lg-4">
+            <div class="item">
+                <div class="heading">
+                    <h3>BASIC</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="features">
+                    <h4><span class="feature">Full Support</span> : <span class="value">No</span></h4>
+                    <h4><span class="feature">Duration</span> : <span class="value">30 Days</span></h4>
+                    <h4><span class="feature">Storage</span> : <span class="value">10GB</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$25</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-4">
+            <div class="item">
+                <div class="ribbon">Best Value</div>
+                <div class="heading">
+                    <h3>PRO</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="features">
+                    <h4><span class="feature">Full Support</span> : <span class="value">Yes</span></h4>
+                    <h4><span class="feature">Duration</span> : <span class="value">60 Days</span></h4>
+                    <h4><span class="feature">Storage</span> : <span class="value">50GB</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$50</h4>
+                </div>
+                <button class="btn btn-block btn-primary" type="submit">BUY NOW</button>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-4">
+            <div class="item">
+                <div class="heading">
+                    <h3>PREMIUM</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="features">
+                    <h4><span class="feature">Full Support</span> : <span class="value">Yes</span></h4>
+                    <h4><span class="feature">Duration</span> : <span class="value">120 Days</span></h4>
+                    <h4><span class="feature">Storage</span> : <span class="value">150GB</span></h4>
+                </div>
+                <div class="price">
+                    <h4>$150</h4>
+                </div>
+                <button class="btn btn-block btn-outline-primary" type="submit">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid my-4 d-none">
+    
+    <div class="row gx-3">
+        <div class="col-md-8 mb-3 mb-md-0">
+            <div class="card">
+                
+                
+                <div class="card-body">
+                    <h2 class="h5 mb-1" style="
+                    font-size: 1.1rem;
+                    ">Negociação</h2>
+                    <h2 class="h6 mb-4" style="
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 15px;
+                    ">Escolha uma opção para negociar</h2>
+                    <div class="table-responsive">
+                        
+                        <table class="table table-centered table-nowrap mb-0 rounded"><thead class="thead-light"><tr><th class="border-0 rounded-start">&nbsp;</th><th class="border-0">Entrada</th><th class="border-0">Parcela</th><th class="border-0">Desconto</th><th class="border-0 rounded-end">Change</th></tr></thead><tbody><tr><td><a href="#" class="text-primary fw-bold">1</a></td><td class="fw-bold d-flex align-items-center"><svg class="icon icon-xxs text-gray-500 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg> Direct</td><td>Direct</td><td>-</td><td>--</td></tr><tr><td><a href="#" class="text-primary fw-bold">2</a></td><td class="fw-bold d-flex align-items-center"><svg class="icon icon-xxs text-gray-500 me-2" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg> Google Search</td><td>Search / Organic</td><td>-</td><td>--</td></tr><tr><td><a href="#" class="text-primary fw-bold">3</a></td><td class="fw-bold d-flex align-items-center"><svg class="icon icon-xxs text-gray-500 me-2" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg> youtube.com</td><td>Social</td><td><a class="small fw-bold" href="#">Arts and Entertainment</a></td><td>#2</td></tr></tbody></table>
+                
+                    </div>
+                </div>
+
+
+                <div class="card-footer bg-white d-flex justify-content-end align-items-center">
+                    <div class="block-27" style="zoom:0.85;">
+                        <ul>
+                          <li><a href="#">&lt;</a></li>
+                          <li class="active"><span>1</span></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">&gt;</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title" style="padding:10px 10px;border-bottom:1px solid #ddd;"> Produtos</h5>
+                <ul class="list-group list-group-flush px-2">
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                    <div>
+                        <h3 class="h6 mb-1">Data de vencimento</h3>
+                        <p class="small pe-4">Para realizar o pagamento </p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                        <select class="form-select mb-0" id="estado">
+                            <option selected="selected">Consultas</option>
+                            <option value="1">10</option>
+                            <option value="2">20</option>
+                        </select>
+                        <label class="form-check-label" for="user-notification-1"></label>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                    <div>
+                        <h3 class="h6 mb-1">Forma de pagamento</h3>
+                        <p class="small pe-4">Escolha o método de pagamento</p>
+                    </div>
+                    <div>
+                        <div class="form-check form-switch">
+                        <i class="bi bi-credit-card-2-front-fill" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;"></i>
+                        <label class="form-check-label" for="user-notification-1"></label>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center justify-content-between pt-3 px-0 border-bottom">
+                        <div>
+                            <h3 class="h6 mb-1">Atividade da conta</h3>
+                            <p class="small pe-4">Notificações importantes por e-mail sobre atividades na conta</p>
+                        </div>
+                        <div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="user-notification-2" checked="checked"> 
+                                <label class="form-check-label" for="user-notification-2"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-3 mx-2">Continuar</a>
+                </div>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        
+
+
+
+
+        <div class="container-fluid p-0 mt-3 d-none">
+            <div class="row pt-3 pb-1 g-0" style="background:#242635;">
+                <div class="col-12">
+                    <div class="white-box">
+                        <p class="text-muted text-center" style="font-size:14px;opacity: .8;">© 2024 DataPact - Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid my-4 d-none">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-white rounded p-3">
+                    <h5>As melhores ofertas para você</h5>
+                        <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table shoping-cart-table">
+                            <tbody>
+                                <tr>
+                                <td width="90">
+                                    <div class="cart-product-imitation d-none"> </div>
+                                    <img src="https://i.imgur.com/xG6QMtw.jpg">
+                                </td>
+                                <td class="desc">
+                                    <h3>
+                                    <a href="https://www.bootdey.com/snippets/view/shopping-cart-checkout" class="text-navy"> Pacote de consultas </a>
+                                    </h3>
+                                    <p class="small"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is https://www.bootdey.com/snippets/view/shopping-cart-checkout</p>
+                                    <dl class="small m-b-none">
+                                    <dt>Description lists</dt>
+                                    <dd>A description list is perfect for defining terms.</dd>
+                                    </dl>
+                                    <div class="m-t-sm">
+                                    <a href="#" class="text-muted">
+                                        <i class="fa fa-gift"></i> Add gift package </a> | <a href="#" class="text-muted">
+                                        <i class="fa fa-trash"></i> Remove item </a>
+                                    </div>
+                                </td>
+                                <td> $180,00 <s class="small text-muted">$230,00</s>
+                                </td>
+                                <td width="65">
+                                    <input type="text" class="form-control" placeholder="1">
+                                </td>
+                                <td>
+                                    <h4> $180,00</h4>
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid p-0 mt-3 mb-5 d-none">
+            <div class="row bg-white py-5 px-5 rounded g-0">
+                <div class="col-12">
+                    <div class="white-box">
+                        <h3 class="box-title">Olá Bruno,</h3>
+                        <h3 class="box-title">As melhores ofertas para você!</h3>
+                        <p class="text-muted">Negociação simples e segura com até 99% de desconto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <!--Componente Stats-->
+        <div class="container-fluid d-none">
+            <div class="row">
+                <div class="col-12 grid-stats cp-stats-texto">
+                    
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:20px;margin-top:2px;" xmlns="http://www.w3.org/2000/svg" width="40" height="64" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 40 64"><rect width="36" height="60" x="2" y="2" rx="5"></rect><path d="M26.414 4.12h-12m1.598 31.63c0 .994.472 1.948 1.314 2.651.842.704 1.984 1.099 3.174 1.099m0 0c.6.037 1.204-.034 1.77-.21a4.36 4.36 0 0 0 1.503-.806 3.5 3.5 0 0 0 .965-1.256c.21-.472.295-.976.25-1.478 0-3.75-8.976-3.75-8.976-7.5a2.976 2.976 0 0 1 .25-1.478c.21-.472.539-.9.965-1.257a4.357 4.357 0 0 1 1.504-.806 4.95 4.95 0 0 1 1.769-.21m0 15V42m0-17.5c1.19 0 2.332.395 3.174 1.098.842.703 1.314 1.657 1.314 2.652M20.5 24.5V22"></path></svg>
+                                </div>
+                                <div class="mb-1">Fácil</div>
+                                <div class="mb-2">Aqui é você quem diz como e quanto pode pagar pela sua dívida</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg class="svg-clock" style="fill: #ff6c00;width:38px;" xmlns="http://www.w3.org/2000/svg" width="63" height="46" fill="currentColor" viewBox="0 0 63 46"><path d="M14 28.5a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 0 3h-8a1.5 1.5 0 0 1-1.5-1.5Zm-6 0A1.5 1.5 0 0 1 9.5 27h1a1.5 1.5 0 0 1 0 3h-1A1.5 1.5 0 0 1 8 28.5Zm-5-12A1.5 1.5 0 0 1 4.5 15h20a1.5 1.5 0 0 1 0 3h-20A1.5 1.5 0 0 1 3 16.5Zm5 6A1.5 1.5 0 0 1 9.5 21h15a1.5 1.5 0 0 1 0 3h-15A1.5 1.5 0 0 1 8 22.5Zm-8 0A1.5 1.5 0 0 1 1.5 21h4a1.5 1.5 0 0 1 0 3h-4A1.5 1.5 0 0 1 0 22.5ZM42.454 12a1.5 1.5 0 0 1 1.5 1.5v11.154a1.5 1.5 0 0 1-.83 1.341l-8.6 4.3a1.5 1.5 0 0 1-1.341-2.683l7.77-3.885V13.5a1.5 1.5 0 0 1 1.5-1.5Z"></path><path d="m25.256 8.508 3.223.806a1.5 1.5 0 1 1-.727 2.91l-6.616-1.653a1.5 1.5 0 0 1-1.091-1.82l1.654-6.615a1.5 1.5 0 0 1 2.91.728l-.718 2.872A25.415 25.415 0 0 1 40.001 0v1.5V0a23 23 0 1 1-19.125 35.778 1.5 1.5 0 0 1 2.495-1.667A20 20 0 1 0 40 3h-.002a22.415 22.415 0 0 0-14.743 5.508Z"></path></svg>
+                                </div>
+                                <div class="mb-1">Rápido</div>
+                                <div class="mb-2">Você faz tudo online e só precisa de 5 minutos para negociar.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:27px;" xmlns="http://www.w3.org/2000/svg" width="58" height="64" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 58 64" class="card-info-icon"><rect width="36" height="60" x="11" y="2" rx="5"></rect><path d="M35 4.12H23m2.896 47.535h6.207M2 2l54 60"></path></svg>
+                                </div>
+                                <div class="mb-1">Sem ligações</div>
+                                <div class="mb-2">Troque horas no telefone por uma negociação rápida.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="box-cs">
+                                <div>
+                                    <svg style="width:28px;" xmlns="http://www.w3.org/2000/svg" width="47" height="57" fill="none" stroke="#ff6c00" stroke-linecap="round" stroke-width="3" viewBox="0 0 47 57"><path d="M24.454 34v8m11-23.929V13.25a11.25 11.25 0 1 0-22.5 0v4.821"></path><rect width="43" height="35" x="2.454" y="20" rx="5"></rect><rect width="43" height="35" x="2.454" y="20" rx="5"></rect></svg>
+                                </div>
+                                <div class="mb-1">Seguro</div>
+                                <div class="mb-2">Negocie com a certeza de que seus dados estão protegidos.</div>
+                                <div class="hr-cs"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--Componentes Aletaorio-->
+        <!-- <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-12" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+            <div class="row mt-1 gx-2 gy-2">
+                <div class="col-md-6" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+                <div class="col-md-6" style="background:inherit;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12" style="background:inherit;height: 800px;">
+                    <div style="background:#fff;padding:10px;border:1px solid #ddd;border-radius:5px;">teste</div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+
+
+
+</body>
+</html>

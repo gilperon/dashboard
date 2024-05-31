@@ -68,9 +68,22 @@
                     </div>
                 </a>
                 <ul class="list-unstyled mb-0 collapse" id="pageSubmenu-1">
-                    <li><a href="#">Informações</a></li>
+                    <li><a href="#">FM Business</a></li>
                 </ul>
                 <!--Sub2-->
+                <a href="#pageSubmenu-2" data-bs-toggle="collapse" aria-expanded="false" class="nav-title collapsed" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1 w-100">
+                        <div class="d-flex justify-content-start align-items-center gap-1"><span class="material-symbols-outlined"> format_list_bulleted </span> Logs</div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </a>
+                <ul class="list-unstyled mb-0 collapse" id="pageSubmenu-2">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <!--Sub3-->
                 <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title" onclick=" $(this).toggleClass('active');">
                     <div class="d-flex justify-content-between align-items-center gap-1">
                         <span class="material-symbols-outlined"> help </span> Suporte
@@ -297,12 +310,13 @@ padding-bottom: 15px;
                     </div>
                     <div>
                         <div class="form-check form-switch d-flex flex-column gap-2" style="justify-content: end;align-items: end;"> 
-                            <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><span style="
-                            font-size: 13px;
-                            margin-right: 5px;
-                            text-align: right;
-                            ">De <strike>R$200</strike> por<br> <span class="h6" style="font-size: 1.05rem;">R$180</span><span class="material-symbols-outlined d-none" style=" font-size: 17px; margin-left: 2px;vertical-align:-2px; "> sell </span><br></span> 
-                            </div>
+                        <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><span style="font-size: 13px; margin-right: 5px;
+                        ">De <strike>R$200</strike> por R$180<br></span> 
+                        </div>
+                        <div class="form-check form-switch d-flex flex-column gap-2 d-none">
+                            <button type="button" class="btn btn-sm btn-dark d-flex" style="border-radius: 20px;border: 0;padding: .35rem .65rem;background: #00a98e;color: #fff;"> <span class="material-symbols-outlined" style="font-size: 16px;margin-right: 2px;display: none;"> sell </span> <span style="margin-top: -3px;">Negociar</span> </button>
+                            <span class="badge badge-default d-none d-xl-inline-block" style=" margin-left: 5px; vertical-align: 2px; font-size: 11px; padding: 6px 7px; letter-spacing: 0; background: #edf1f5; color: rgba(107, 123, 147, 0.5); width: fit-content; border-radius: 10px; background: rgba(0, 194, 146, 0.2); color: rgba(0, 131, 98, 0.6); ">até 50% off</span>
+                        </div>
                     </div>
                     </li>
                     <li class="list-group-item d-flex align-items-start justify-content-between px-0 border-bottom  pt-3">
@@ -321,7 +335,7 @@ padding-bottom: 15px;
                             font-size: 13px;
                             margin-right: 5px;
                             text-align: right;
-                            ">De <strike>R$1200</strike> por<br> <span class="h6" style="font-size: 1.05rem;">R$974</span><span class="material-symbols-outlined d-none" style=" font-size: 17px; margin-left: 2px;vertical-align:-2px; "> sell </span><br></span> 
+                            ">De <strike>R$200</strike> por<br> <span class="h6" style="font-size: 1.05rem;">R$180</span><span class="material-symbols-outlined d-none" style=" font-size: 17px; margin-left: 2px;vertical-align:-2px; "> sell </span><br></span> 
                             </div>
                     </div>
                     </li>
@@ -409,6 +423,7 @@ padding-bottom: 15px;
 </div>
 
 
+
 <div class="container-fluid my-4">
     <div class="row gx-3">
         <div class="col-md-6 mb-3 mb-md-0">
@@ -418,60 +433,51 @@ padding-bottom: 15px;
 ">
 <h2 class="h5 mb-1" style="
 font-size: 1.1rem;
-">Negociação</h2>
+">Dívidas</h2>
 <h2 class="h6 mb-4" style="
 font-size: 14px;
 font-weight: 400;
 border-bottom: 1px solid #eee;
 padding-bottom: 15px;
-">Opções de pagamento</h2>
+">Suas dívidas á negociar</h2>
                 <ul class="list-group list-group-flush px-2">
                     <li class="list-group-item d-flex align-items-start justify-content-between px-0 border-bottom pt-1">
                     <div>
-                        <h3 class="h6 mb-1" style="
-    font-size: .9rem;
-    font-family: 'Open Sans';
-">Artesanal CP Boleto FIDC </h3>
+                        <h3 class="h6 mb-1">Artesanal CP Boleto FIDC </h3>
                         <p class="small mb-0">Contrato: 398239</p>
                         <p class="small mb-0">Data do contrato: 10/04/2020</p>
                         <p class="small pe-4">Valor: <b>R$200,00</b> <span style="text-decoration: underline;margin-left: 5px;color:#6c757d;cursor: pointer;">ver detalhes</span></p>
                     </div>
                     <div>
-                        <div class="form-check form-switch d-flex flex-column gap-2" style="justify-content: end;align-items: end;"> 
-                            <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><span style="
-                            font-size: 13px;
-                            margin-right: 5px;
-                            text-align: right;
-                            ">De <strike>R$200</strike> por<br> <span class="h6" style="font-size: 1.05rem;">R$180</span><span class="material-symbols-outlined d-none" style=" font-size: 17px; margin-left: 2px;vertical-align:-2px; "> sell </span><br></span> 
-                            </div>
+                        <div class="form-check form-switch d-flex flex-column gap-2"> 
+                            <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a> 
+                        </div>
+                        <div class="form-check form-switch d-flex flex-column gap-2 d-none">
+                            <button type="button" class="btn btn-sm btn-dark d-flex" style="border-radius: 20px;border: 0;padding: .35rem .65rem;background: #00a98e;color: #fff;"> <span class="material-symbols-outlined" style="font-size: 16px;margin-right: 2px;display: none;"> sell </span> <span style="margin-top: -3px;">Negociar</span> </button>
+                            <span class="badge badge-default d-none d-xl-inline-block" style=" margin-left: 5px; vertical-align: 2px; font-size: 11px; padding: 6px 7px; letter-spacing: 0; background: #edf1f5; color: rgba(107, 123, 147, 0.5); width: fit-content; border-radius: 10px; background: rgba(0, 194, 146, 0.2); color: rgba(0, 131, 98, 0.6); ">até 50% off</span>
+                        </div>
                     </div>
                     </li>
                     <li class="list-group-item d-flex align-items-start justify-content-between px-0 border-bottom  pt-3">
                     <div>
-                        <h3 class="h6 mb-1" style="
-    font-size: .9rem;
-    font-family: 'Open Sans';
-">Artesanal CP Boleto FIDC</h3>
+                        <h3 class="h6 mb-1">Artesanal CP Boleto FIDC</h3>
                         <p class="small mb-0">Contrato: 398239</p>
                         <p class="small mb-0">Data do contrato: 10/04/2020</p>
                         <p class="small pe-4">Valor: <b>R$1.200,00</b> <span style="text-decoration: underline;margin-left: 5px;color:#6c757d;cursor: pointer;">ver detalhes</span></p>
                     </div>
                     <div>
-                        <div class="form-check form-switch d-flex flex-column gap-2" style="justify-content: end;align-items: end;"> 
-                            <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><span style="
-                            font-size: 13px;
-                            margin-right: 5px;
-                            text-align: right;
-                            ">De <strike>R$1200</strike> por<br> <span class="h6" style="font-size: 1.05rem;">R$974</span><span class="material-symbols-outlined d-none" style=" font-size: 17px; margin-left: 2px;vertical-align:-2px; "> sell </span><br></span> 
-                            </div>
+                        <div class="form-check form-switch d-flex flex-column gap-2"> <a class="flex items-center gap-0.5 text-xs font-medium text-primary-700 md:text-base" href="/meus-pedidos" style="white-space:nowrap; font: 500 14px 'Inter' !important; /* text-decoration: underline; */ color: #00a98e; letter-spacing: -.5px; ">Negociar <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="h-4 w-4 md:h-5 md:w-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a> </div>
+                        <div class="form-check form-switch d-flex justify-content-center align-center d-none">
+                            <button type="button" class="btn btn-sm btn-dark d-flex" style="border-radius: 20px;border: 0;padding: .35rem .65rem;background: #00a98e;color: #fff;"> <span class="material-symbols-outlined" style="font-size: 16px;margin-right: 2px;display: none;"> sell </span> <span style="margin-top: -3px;">Negociar</span> </button>
+                            <!-- <button type="button" class="btn btn-sm btn-outline-dark border-0 d-flex">
+                                <span class="material-symbols-outlined" style=" font-size: 18px; margin-right: 3px; "> sell </span> <span style=" margin-top: -2px; ">Negociar</span>
+                            </button> -->
+                        </div>
                     </div>
                     </li>
                     <li class="list-group-item d-flex align-items-start justify-content-between pt-3 px-0">
                         <div>
-                            <h3 class="h6 mb-1" style="
-    font-size: .9rem;
-    font-family: 'Open Sans';
-">Consiga Fundo de Investimento</h3>
+                            <h3 class="h6 mb-1">Consiga Fundo de Investimento</h3>
                             <p class="small mb-0">Contrato: 12312</p>
                             <p class="small mb-0">Data do contrato: 10/04/2020</p>
                             <p class="small pe-4">Valor: <b>R$10,00</b> <span style="text-decoration: underline;margin-left: 5px;color:#6c757d;cursor: pointer;">ver detalhes</span></p>
@@ -495,19 +501,19 @@ padding-bottom: 15px;
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="card border-0-co shadow-co mb-4">
                 
                     <div class="card-body">
 <h2 class="h5 mb-1" style="
 font-size: 1.1rem;
-">Pagamento</h2>
+">Histórico</h2>
 <h2 class="h6 mb-4" style="
 font-size: 14px;
 font-weight: 400;
 border-bottom: 1px solid #eee;
 padding-bottom: 15px;
-">Detalhamento da proposta</h2>
+">Negociações concluidas</h2>
                         <div class="px-2 py-1">
                                 <div class="row align-items-center d-block d-sm-flex border-bottom pb-4 mb-4">
                                 <div class="col-auto mb-3 mb-sm-0">
@@ -518,9 +524,9 @@ padding-bottom: 15px;
                                 </div>
                                 <div class="col">
                                     <a href="../calendar.html">
-                                    <h3 class="h6 mb-0" style="font-size: 15px;font-size: .9rem;font-family: 'Open Sans';">Negociação realizada</h3>
+                                    <h3 class="h6 mb-0" style="font-size: 15px;">Negociação realizada</h3>
                                     </a>
-                                    <div style="font-size: 14px;margin-top: 3px;">Boleto gerado para pagamento no valor de <b>R$10.00</b>
+                                    <div style="font-size: 14px;margin-top:4px;">Boleto gerado para pagamento no valor de <b>R$10.00</b>
                                     </div>
                                     <div class="small " style="margin-top: -2px;"><span style="/* text-decoration: underline; */color:#6c757d;cursor: pointer;font-size: 12px;">Referente ao contrato n.º 284733</span></div>
                                 </div>
@@ -534,9 +540,9 @@ padding-bottom: 15px;
                                     </div>
                                     <div class="col">
                                         <a href="../calendar.html">
-                                        <h3 class="h6 mb-0" style="font-size: 15px;font-size: .9rem;font-family: 'Open Sans';">Negociação realizada</h3>
+                                        <h3 class="h6 mb-0" style="font-size: 15px;">Negociação realizada</h3>
                                         </a>
-                                        <div style="font-size: 14px;margin-top: 3px;">PIX gerado para pagamento no valor de <b>R$10.00</b>
+                                        <div style="font-size: 14px;margin-top:4px;">PIX gerado para pagamento no valor de <b>R$10.00</b>
                                         </div>
                                         <div class="small " style="margin-top: -2px;"><span style="/* text-decoration: underline; */color:#6c757d;cursor: pointer;font-size: 12px;">Referente ao contrato n.º 498321</span></div>
                                     </div>
@@ -548,9 +554,6 @@ padding-bottom: 15px;
         </div>
     </div>
 </div>
-
-
-
 
 
 

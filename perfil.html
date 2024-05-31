@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+     <!--Melhor importar as fontes no css fica mais clean @import-->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,700|Lato:300,400,500,600,700|Open+Sans:300,400,500,600,700|Roboto:300,400,500,700" rel="stylesheet">
+
+     <!-- FontAwesome Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <!-- Style custom -->
+    <link rel="stylesheet" href="css/base.css">
+
+
+</head>
+<body class="parceiro-bradesco">
+
+    <!--Menu Desktop-->
+    <nav id="menu">
+
+        <div style="position:sticky;top:0;left:0;background:#242635;z-index:10;">
+            <div style="display:flex;justify-content: space-between; align-items: center;padding:0 10px;height:60px;background:#2C2F41;">
+                <img src="https://gilperon.github.io/skeleton/assets/img/icon-logo.png" style="height:32px;filter: grayscale(1); opacity: .5;margin-left:10px;" hidden>
+            </div>
+
+            <section class="profile p-3" style="display: flex;flex-direction: row; justify-content:start; align-items: center;padding:0 15px;background:#1A1C29;">
+                <div>
+                    <span class="cp-avatar cp-avatar-big">JO</span>
+                </div>
+                <div style="padding:0 10px;font-family: 'Inter';opacity: .7;zoom: .9;">
+                    <span style="font-size:16px;color:#fff;display: block;font-weight:500;opacity: .8;margin-bottom: -2px;">José</span>
+                    <span style="font-size:14px;color:#fff;display: block;opacity: .8;">CPF: 375.034.239-10</span>
+                </div>
+            </section>
+
+            <nav id="nav-simple">
+                <!--Sub0-->
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title active" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> home </span> Início
+                    </div>
+                </a>
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> sell </span> Ofertas
+                    </div>
+                </a>
+                <!--Sub1-->
+                <a href="#pageSubmenu-1" data-bs-toggle="collapse" aria-expanded="false" class="nav-title collapsed" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1 w-100">
+                        <div class="d-flex justify-content-start align-items-center gap-1"><span class="material-symbols-outlined"> edit_note </span> Perfil</div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </a>
+                <ul class="list-unstyled mb-0 collapse" id="pageSubmenu-1">
+                    <li><a href="#">FM Business</a></li>
+                </ul>
+                <!--Sub2-->
+                <a href="#pageSubmenu-2" data-bs-toggle="collapse" aria-expanded="false" class="nav-title collapsed" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1 w-100">
+                        <div class="d-flex justify-content-start align-items-center gap-1"><span class="material-symbols-outlined"> format_list_bulleted </span> Logs</div>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </div>
+                </a>
+                <ul class="list-unstyled mb-0 collapse" id="pageSubmenu-2">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <!--Sub3-->
+                <a href="#" data-bs-toggle="collapse" aria-expanded="false" class="nav-title" onclick=" $(this).toggleClass('active');">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <span class="material-symbols-outlined"> help </span> Suporte
+                    </div>
+                </a>
+            </nav>
+
+        </div>
+
+        
+        <div style="margin-top:auto;background:#000;position:sticky;bottom:0;z-index:10;" hidden>
+            <button type="button" class="btn btn-secondary w-100" style="opacity: 0.3; background: #2a2a2a; border: 0; font-size: 14px; padding: 8px;height:50px;"> <i class="material-icons" style="display:none;vertical-align:-7px;">help</i> Desenvolvido por PH3A</button>
+        </div>
+    </nav>
+
+    <!--Menu Mobile-->
+    <aside id="mobile-menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="asideMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <img src="./assets/img/icon-logo.png" style="width: 35px;">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+            <div class="d-flex justify-content-center align-items-center div-cta">
+                <a href="./consulta.html" class="btn-cta">
+                    <span class="icon-search"></span> Buscar minhas dívidas
+                </a>
+            </div>
+            <div class="offcanvas-body offcanvas-scrollbar">
+            <nav id="mobile-navigation">
+                <a href="./"><i class="bi-house icone"></i>Início</a>
+                <a href="#drop-1" id="produtos-drop" data-bs-toggle="collapse" aria-expanded="false">
+                    <i class="bi-layers"></i>Parceiros
+                    <span class="arrow-nav"></span>
+                </a>
+                <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                    <li><a href="./crefaz.html">Crefaz</a></li>
+                    <li><a href="./bradesco.html">Bradesco</a></li>
+                </ul>
+                <hr class="divider">
+                <a href="https://www.ph3a.com.br/"><i class="bi-window"></i>Suporte</a>
+            </nav>
+            </div>
+        </div>
+    </aside>
+
+    <!--Content-->
+    <main id="main">
+
+        <div class="container-fluid" style="-webkit-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1); box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1);box-shadow:none;border-bottom:1px solid #eee;">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center" style="height:60px;background:#fff;">
+                    <div class="d-flex">
+                        <!-- Icon Menu on Desktop-->
+                        <div class="d-block d-md-none">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" data-bs-toggle="offcanvas" data-bs-target="#asideMenu"></i>
+                        </div>
+                        <!-- Icon Menu on Desktop-->
+                        <div class="d-none d-md-flex">
+                            <i class="bi bi-list" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','0');$('#menu').css('left','-250px');$(this).toggle().next('.bi-x').toggle();"></i>
+                            <i class="bi bi-x" style="display:none;color:#000;font-size:29px;line-height: 10px;cursor:pointer;" onclick="$('#main').css('margin-left','250px');$('#menu').css('left','0');$(this).toggle().prev('.bi-list').toggle();"></i>
+                        </div>
+                        <div class="menu-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height:22px;margin-left:7px;">
+                            <img src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height:40px;margin-left:7px;">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="material-symbols-outlined" style="transform: rotate(90deg);opacity: .5;margin-right: 5px;margin-top: 2px;zoom: .9;">chevron_right</span>
+                        <span class="cp-avatar">JO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-12 p-3 px-4 pt-3 pb-2">
+                <h4 style="margin-top:5px;">Olá José,</h4>
+                <h6 class="fw-normal mb-0 text-muted">Confira as <span style=" color: #000; font-weight: 600; opacity: .8; letter-spacing: -.4px; ">melhores ofertas</span> para você!</h6>
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-12 col-lg-8" style="background:fff;">
+                    
+    
+    
+    
+        <style>
+            label {
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+                display:inline-block;
+            }
+            .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                line-height: 1.3;
+                color: #111827;
+            }
+            .border-0 {
+                border: 0!important;
+            }
+            .shadow {
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)!important;
+            }
+    
+    
+            .btn-custom {
+                color: #fff !important;
+                background-color: #26b99a;
+                border-color: #26b99a;
+            }
+        </style>
+    
+    
+    
+    
+                <div class="card card-body border-0 shadow mb-4 p-4">
+                <h2 class="h5 mb-4">Perfil</h2>
+                <form>
+                    <div class="row gx-3">
+                    <div class="col-md-6 mb-3">
+                        <div>
+                        <label for="razao_social">Nome</label>
+                        <input class="form-control" id="razao_social" type="text" placeholder="Digite o nome da sua empresa" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div>
+                        <label for="cnpj">CPF</label>
+                        <input class="form-control" id="cnpj" type="text" placeholder="Digite o numero do CNPJ" required="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row align-items-center gx-3">
+                    <div class="col-md-6 mb-3">
+                        <label for="abertura">Data de abertura</label>
+                        <div class="input-group">
+                        <span class="input-group-text">
+                                <span class="fa fa-calendar" style="font-size: 14px;margin-right: 3px;"></span>
+                        </span>
+                        <input class="form-control datepicker-input" id="abertura" type="date" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="gender">Tipo</label>
+                        <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                        <option selected="selected">Sociedade Limitada (LTDA)</option>
+                        <option value="1">Micro Empresa (ME)</option>
+                        <option value="2">Micro Empreendedor Individual (MEI)</option>
+                        <option value="3">Sociedade Simples (S/S)</option>
+                        <option value="4">Empresa Pequeno Porte (EEP)</option>
+                        <option value="5">Sociedade Anônima (S.A)</option>
+                        <option value="6">Empresário Individual (EI)</option>
+                        <option value="7">Empresa Individual de Responsabilidade Limitada (EIRELI)</option>
+                        <option value="8">Outro</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="row gx-3">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" type="email" placeholder="Email do responsavel" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input class="form-control" id="telefone" type="number" placeholder="Telefone para contato" required="">
+                        </div>
+                    </div>
+                    </div>
+                    <h2 class="h5 my-4">Informações</h2>
+                    <div class="row gx-3">
+                    <div class="col-sm-9 mb-3">
+                        <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input class="form-control" id="endereco" type="text" placeholder="Digite o endereço de sua empresa" required="">
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mb-3">
+                        <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input class="form-control" id="numero" type="number" placeholder="N." required="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row gx-3">
+                    <div class="col-sm-4 mb-3">
+                        <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input class="form-control" id="cidade" type="text" placeholder="Cidade" required="">
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                        <label for="estado">Estado</label>
+                        <select class="form-select mb-0" id="estado">
+                        <option selected="selected">Estado</option>
+                        <option value="1">SC</option>
+                        <option value="2">RJ</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input class="form-control" id="cep" type="tel" placeholder="CEP" required="">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="mt-3">
+                    <button class="btn btn-custom mt-2 animate-up-2" type="submit">Salvar</button>
+                    <a href="https://arpdados.org/Ambiente_Programadores/arp-novo/?page=minha-conta-nova" class="btn mt-2 btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+                </div>
+    
+    
+    
+    
+                </div>
+                <div class="col-12 col-lg-4" style="background:fff;">
+                
+
+
+
+   
+
+
+
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title" style="padding:10px 10px;border-bottom:1px solid #ddd;"> Produtos</h5>
+                        <ul class="list-group list-group-flush px-2">
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                            <div>
+                                <h3 class="h6 mb-1">Licença por consultas</h3>
+                                <p class="small pe-4">Pacote de consultas equivalentes </p>
+                            </div>
+                            <div>
+                                <div class="form-check form-switch">
+                                <select class="form-select mb-0" id="estado">
+                                    <option selected="selected">Consultas</option>
+                                    <option value="1">10</option>
+                                    <option value="2">20</option>
+                                </select>
+                                <label class="form-check-label" for="user-notification-1"></label>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3">
+                            <div>
+                                <h3 class="h6 mb-1">Licença Anual</h3>
+                                <p class="small pe-4">Consultas ilimitadas durante um ano </p>
+                            </div>
+                            <div>
+                                <div class="form-check form-switch">
+                                <i class="bi bi-credit-card-2-front-fill" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;"></i>
+                                <label class="form-check-label" for="user-notification-1"></label>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between pt-3 px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Atividade da conta</h3>
+                                    <p class="small pe-4">Notificações importantes por e-mail sobre atividades na conta</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-2" checked="checked"> 
+                                        <label class="form-check-label" for="user-notification-2"></label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3 mx-2">Comprar</a>
+                        </div>
+                    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        
+    </main>
+
+
+
+
+</body>
+</html>
